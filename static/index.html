@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="离线运行、可解释的智能简历筛选与岗位匹配系统">
+  <title>智聘镜 · 简历岗位匹配系统</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">镜</div>
+        <div>
+          <strong>智聘镜</strong>
+          <span>Resume Lens</span>
+        </div>
+      </div>
+
+      <nav class="nav-list" aria-label="主导航">
+        <button class="nav-item active" data-view="match-view"><span>⌁</span> 单份智能匹配</button>
+        <button class="nav-item" data-view="rank-view"><span>≡</span> 候选人批量排名</button>
+        <button class="nav-item" data-view="method-view"><span>◇</span> 评分方法说明</button>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="pulse-dot"></span>
+        <div><strong>本地离线运行</strong><small>数据不会上传到互联网</small></div>
+      </div>
+      <div class="student-card">
+        <small>专业综合实训</small>
+        <strong>赵子恒 · 计科中外1班</strong>
+        <span>Python 智能应用</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI TALENT MATCHING</p>
+          <h1>让每一次筛选都有依据</h1>
+          <p>从文本、技能、经验与学历四个维度生成可解释的岗位匹配结论。</p>
+        </div>
+        <div class="engine-badge"><span>AI</span><div><strong>规则 + TF-IDF</strong><small>可解释匹配引擎</small></div></div>
+      </header>
+
+      <section class="stats-grid" aria-label="系统概览">
+        <article class="stat-card"><span>岗位库</span><strong id="job-count">—</strong><small>个测试岗位</small></article>
+        <article class="stat-card"><span>人才库</span><strong id="resume-count">—</strong><small>份匿名简历</small></article>
+        <article class="stat-card accent"><span>数据模式</span><strong>100%</strong><small>本地处理</small></article>
+      </section>
+
+      <section id="match-view" class="view-panel active">
+        <div class="work-grid">
+          <article class="panel input-panel">
+            <div class="panel-title">
+              <div><span class="step">01</span><h2>选择岗位</h2></div>
+              <span class="required">必选</span>
+            </div>
+            <label class="field-label" for="job-select">目标岗位</label>
+            <select id="job-select" class="control"></select>
+            <div id="job-detail" class="job-detail"></div>
+
+            <div class="divider"></div>
+            <div class="panel-title compact">
+              <div><span class="step">02</span><h2>输入简历</h2></div>
+              <span id="char-count">0 字</span>
+            </div>
+            <label class="field-label" for="sample-select">使用匿名测试样例</label>
+            <select id="sample-select" class="control">
+              <option value="">请选择，或在下方粘贴简历</option>
+            </select>
+            <div class="upload-row">
+              <label class="upload-button" for="file-input">读取 TXT / MD 文件</label>
+              <input id="file-input" type="file" accept=".txt,.md,.csv" hidden>
+              <span id="file-name">单个文件不超过 2 MB</span>
+            </div>
+            <label class="field-label" for="resume-text">简历文本</label>
+            <textarea id="resume-text" class="control text-area" placeholder="粘贴候选人的学历、技能、项目和工作经历……"></textarea>
+            <button id="match-button" class="primary-button"><span>开始智能分析</span><b>→</b></button>
+          </article>
+
+          <article class="panel result-panel" id="result-panel">
+            <div id="empty-result" class="empty-state">
+              <div class="empty-orbit"><span>AI</span></div>
+              <h2>等待分析</h2>
+              <p>选择目标岗位并输入简历后，系统将在本地完成四维评分。</p>
+              <div class="empty-steps"><span>文本解析</span><i>→</i><span>特征匹配</span><i>→</i><span>生成结论</span></div>
+            </div>
+            <div id="result-content" class="result-content hidden"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="rank-view" class="view-panel">
+        <article class="panel wide-panel">
+          <div class="rank-header">
+            <div><p class="eyebrow">BATCH RANKING</p><h2>候选人批量排名</h2><p>针对同一岗位对匿名测试集进行统一评分，降低人工初筛偏差。</p></div>
+            <div class="rank-actions"><select id="rank-job-select" class="control"></select><button id="rank-button" class="primary-button small">生成排名</button></div>
+          </div>
+          <div id="rank-summary" class="rank-summary hidden"></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>排名</th><th>候选人</th><th>求职方向</th><th>综合得分</th><th>技能覆盖</th><th>建议</th></tr></thead>
+              <tbody id="rank-body"><tr><td colspan="6" class="table-empty">请选择岗位并生成排名</td></tr></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="method-view" class="view-panel">
+        <article class="panel wide-panel method-panel">
+          <p class="eyebrow">EXPLAINABLE SCORING</p>
+          <h2>不是“黑盒分数”，而是可核验的初筛依据</h2>
+          <p class="method-intro">系统首先对中英文混合文本进行标准化与分词，再计算 TF-IDF 余弦相似度，并结合岗位硬性条件形成综合分。</p>
+          <div class="formula">综合得分 = 文本相似度 × 40% + 技能覆盖 × 35% + 经验匹配 × 15% + 学历匹配 × 10%</div>
+          <div class="method-grid">
+            <article><span>40%</span><h3>文本相似度</h3><p>衡量简历描述与岗位职责在关键词和语义片段上的接近程度。</p></article>
+            <article><span>35%</span><h3>技能覆盖</h3><p>基于规范化技能词典识别同义表达，并显示已匹配与待补充技能。</p></article>
+            <article><span>15%</span><h3>经验匹配</h3><p>提取候选人最大有效年限，与岗位最低年限进行有上限的比例评分。</p></article>
+            <article><span>10%</span><h3>学历匹配</h3><p>将专科、本科、硕士和博士转换为有序等级，核验最低学历条件。</p></article>
+          </div>
+          <div class="ethics-note"><strong>使用边界</strong><p>本系统仅用于课程实训与招聘初筛辅助，不采集性别、年龄、照片等敏感属性；最终录用决定必须由人工结合面试与真实材料作出。</p></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

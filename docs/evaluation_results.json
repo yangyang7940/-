@@ -1,0 +1,93 @@
+{
+  "job_count": 6,
+  "resume_count": 18,
+  "top1_accuracy": 1.0,
+  "precision_at_3": 0.6667,
+  "recall_at_3": 1.0,
+  "details": [
+    {
+      "job_id": "J001",
+      "title": "Python数据分析师",
+      "top3": [
+        "R001",
+        "R002",
+        "R010"
+      ],
+      "relevant": [
+        "R001",
+        "R002"
+      ],
+      "top1_hit": true
+    },
+    {
+      "job_id": "J002",
+      "title": "前端开发工程师",
+      "top3": [
+        "R004",
+        "R005",
+        "R006"
+      ],
+      "relevant": [
+        "R004",
+        "R005"
+      ],
+      "top1_hit": true
+    },
+    {
+      "job_id": "J003",
+      "title": "机器学习工程师",
+      "top3": [
+        "R007",
+        "R008",
+        "R001"
+      ],
+      "relevant": [
+        "R007",
+        "R008"
+      ],
+      "top1_hit": true
+    },
+    {
+      "job_id": "J004",
+      "title": "产品运营专员",
+      "top3": [
+        "R010",
+        "R011",
+        "R002"
+      ],
+      "relevant": [
+        "R010",
+        "R011"
+      ],
+      "top1_hit": true
+    },
+    {
+      "job_id": "J005",
+      "title": "Java后端工程师",
+      "top3": [
+        "R013",
+        "R014",
+        "R003"
+      ],
+      "relevant": [
+        "R013",
+        "R014"
+      ],
+      "top1_hit": true
+    },
+    {
+      "job_id": "J006",
+      "title": "NLP应用开发工程师",
+      "top3": [
+        "R016",
+        "R017",
+        "R018"
+      ],
+      "relevant": [
+        "R016",
+        "R017"
+      ],
+      "top1_hit": true
+    }
+  ]
+}

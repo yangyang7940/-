@@ -1,0 +1,7 @@
+job_id,title,department,location,description,required_skills,min_years,min_education
+J001,Python数据分析师,数据中心,武汉,负责业务数据清洗分析并构建可视化报表；使用SQL提取数据；通过统计分析为运营决策提供洞察,Python|SQL|Pandas|Excel|Matplotlib|数据分析,2,本科
+J002,前端开发工程师,研发中心,武汉,负责企业管理平台前端页面开发；完成组件封装和接口联调；关注交互体验与代码规范,JavaScript|TypeScript|HTML/CSS|Vue|Git|RESTful API,2,本科
+J003,机器学习工程师,算法中心,深圳,负责分类与预测模型的数据处理训练评估和优化；完成机器学习模型工程化验证,Python|NumPy|Scikit-learn|PyTorch|机器学习|数据分析,3,硕士
+J004,产品运营专员,产品中心,武汉,负责用户需求调研和活动运营；跟踪核心指标；通过A/B测试与数据分析持续优化产品,产品运营|需求分析|Excel|SQL|A/B测试|数据分析,1,本科
+J005,Java后端工程师,研发中心,杭州,负责业务系统服务端接口和数据库设计；使用缓存与容器完成稳定交付,Java|Spring Boot|MySQL|Redis|RESTful API|Docker|Linux,3,本科
+J006,NLP应用开发工程师,智能应用部,武汉,负责文本分类问答和大语言模型应用原型；开发可调用的文本智能处理接口,Python|NLP|大语言模型|PyTorch|RESTful API|Git,2,本科

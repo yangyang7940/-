@@ -1,0 +1,19 @@
+resume_id,name,target_role,years,education,skills,summary,experience
+R001,陈晨,Python数据分析师,3年,本科,Python|SQL|Pandas|NumPy|Excel|Matplotlib|Power BI,擅长从业务问题出发完成数据清洗统计分析和可视化,独立完成电商销售看板；使用SQL汇总百万级订单并用Python分析复购率
+R002,林晓,商业数据分析师,2年,本科,Python|SQL|Pandas|Excel|Matplotlib|A/B测试,具有用户增长分析和实验评估经验,完成活动漏斗分析和A/B测试；构建自动化周报将整理时间缩短60%
+R003,周航,数据开发工程师,4年,本科,Python|SQL|MySQL|Linux|Docker|Java,熟悉数据处理脚本和后端服务但可视化经验较少,开发日志采集与数据清洗任务；维护MySQL数据仓库
+R004,王悦,前端开发工程师,3年,本科,JavaScript|TypeScript|HTML|CSS|Vue3|Git|RESTful API,注重组件化开发和用户交互体验,负责后台管理系统前端重构；封装表格和权限组件并完成接口联调
+R005,张宁,Web前端工程师,2年,本科,JavaScript|HTML|CSS|Vue|React|Git,具备响应式页面和跨浏览器适配经验,开发校园服务平台前端；完成移动端适配和页面性能优化
+R006,许超,全栈开发工程师,3年,本科,JavaScript|Vue|Python|Flask|MySQL|Git,能够独立完成中小型Web系统前后端开发,实现工单系统页面及Python接口；负责部署与问题排查
+R007,刘洋,机器学习工程师,4年,硕士,Python|NumPy|Pandas|Scikit-learn|PyTorch|机器学习|深度学习,具备完整的模型训练评估和调优经验,构建用户流失预测模型；通过特征工程将F1值提升8个百分点
+R008,高远,算法工程师,3年,硕士,Python|NumPy|Scikit-learn|TensorFlow|PyTorch|机器学习|数据分析,研究方向为分类模型与轻量化部署,完成图像分类模型训练和剪枝实验；编写可复现实验流程
+R009,宋涛,计算机视觉工程师,2年,本科,Python|OpenCV|PyTorch|深度学习|Linux,熟悉图像分类与目标检测,基于OpenCV完成缺陷检测原型；训练卷积神经网络进行图像分类
+R010,李欣,产品运营专员,2年,本科,产品运营|需求分析|Excel|SQL|A/B测试|数据分析,擅长用户分层和活动效果复盘,策划新用户激活活动；通过漏斗分析提升次日留存5个百分点
+R011,赵敏,用户运营专员,1年,本科,产品运营|Excel|需求分析|数据分析|Power BI,具备社群运营和用户调研经验,维护核心用户社群；整理访谈反馈并输出需求优先级清单
+R012,何嘉,产品助理,1年,专科,Axure|需求分析|Excel|产品运营,能够绘制原型并协助整理产品文档,参与校园小程序需求调研；输出页面原型和功能清单
+R013,郭俊,Java后端工程师,5年,本科,Java|Spring Boot|MySQL|Redis|RESTful API|Docker|Linux|Git,熟悉高并发业务系统设计和服务治理,负责订单服务接口与缓存优化；使用Docker完成测试环境部署
+R014,彭宇,后端开发工程师,3年,本科,Java|Spring Boot|MySQL|Redis|RESTful API|Linux,具备接口开发数据库设计和性能排查能力,开发会员与积分模块；优化SQL后接口响应时间降低35%
+R015,郑凯,软件开发工程师,2年,本科,Java|Spring Boot|MySQL|Git|数据结构,基础扎实并遵循代码规范,完成课程管理系统后端；编写单元测试和接口文档
+R016,孙菲,NLP应用开发工程师,3年,硕士,Python|NLP|PyTorch|大语言模型|LangChain|RESTful API|Git,专注文本理解和检索增强问答应用,构建企业文档问答原型；完成文本切分检索与提示词优化
+R017,罗文,自然语言处理工程师,2年,本科,Python|NLP|Scikit-learn|PyTorch|大语言模型|Git,具备文本分类和意图识别项目经验,训练客服意图分类模型；开发大语言模型知识问答演示应用
+R018,谢雨,Python开发工程师,2年,本科,Python|Flask|Django|MySQL|RESTful API|Git,熟悉Web接口开发并了解自然语言处理,开发内容管理系统接口；参与文本关键词提取功能
